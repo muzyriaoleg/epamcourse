@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="epamcourse" target="1.5" />
+      <module name="epamcourse" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>
