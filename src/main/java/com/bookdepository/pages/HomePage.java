@@ -12,7 +12,7 @@ import org.testng.Assert;
 
 import static org.openqa.selenium.Keys.ENTER;
 
-public class HomePage implements Page{
+public class HomePage extends Page{
 
     @FindBy(css = "img[alt='Bookdepository.com']")
     private WebElement logo;

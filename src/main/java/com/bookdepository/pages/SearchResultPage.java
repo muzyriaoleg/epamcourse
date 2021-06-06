@@ -4,11 +4,9 @@ import com.bookdepository.core.BrowserFactory;
 import com.bookdepository.core.Constants;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
-public class SearchResultPage implements Page {
+public class SearchResultPage extends Page {
 
     private final String searchTerm;
     private WebElement book;
@@ -33,8 +31,5 @@ public class SearchResultPage implements Page {
         book.click();
     }
 
-    private WebElement find(By by) {
-        return new WebDriverWait(BrowserFactory.driver(), 10)
-                .until(ExpectedConditions.presenceOfElementLocated(by));
-    }
+
 }

@@ -17,10 +17,11 @@ public class HomePageTest extends BrowserFactory {
     BookPage bookPage = new BookPage(bookTitle);
 
     @Test
-    public void searchBook() {
+    public void addBookToBasket(){
         homePage.open();
         homePage.search(searchTerm);
         searchResultPage.selectBook(bookTitle);
-        Assert.assertTrue(bookPage.isOpened(), "Book page is not opened");
+        bookPage.addBookToBasket();
+        Assert.assertTrue(bookPage.isBookAddedToBasket(), "Book is not added to the basket");
     }
 }
